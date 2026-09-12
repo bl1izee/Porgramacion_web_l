@@ -23,7 +23,6 @@ Fases (checkpoints):
 let intentos = 0;
 const historial = [];
 const secreto = Math.floor(Math.random() * 100) + 1;
-console.log("(psst... el secreto es", secreto, ")")
 
 function mision(){
     let acertar = false;
