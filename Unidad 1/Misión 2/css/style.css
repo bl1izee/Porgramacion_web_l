@@ -1,0 +1,65 @@
+/* Fuente descargada */
+@font-face {
+    font-family: 'arcade';
+    src: url('fonts/arcadeclassic/ARCADECLASSIC.TTF') format('truetype');
+}   
+
+/* Parte general de la página */
+#titulo{
+    font-family: 'arcade';
+    letter-spacing: 1px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#box_principal{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#usuario_input{
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(235, 232, 232);
+    margin-left: 25%;
+    margin-right: 25%; 
+    border-radius: 20px;
+}
+
+/* Parte mas individual */
+#longitud{
+    margin: 15px;
+}
+
+#clave{
+    display: flex;
+    justify-content: center;
+}
+
+#generar{
+    margin: 0 auto;
+    margin-bottom: 10px;
+}
+
+#generar:hover{
+    background-color: rgb(116, 154, 129);
+}
+
+.input{
+    display: flex;
+    justify-content: center;
+}
+
+
+/*Clases del tipo de contraseña*/
+.débil{
+    color: red;
+}
+
+.aceptable{
+    color: rgb(255, 132, 0);
+}
+
+.legendaria{
+    color: green;
+}
