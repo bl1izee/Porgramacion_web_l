@@ -4,11 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="js/app.js" defer></script>
+    <link rel="stylesheet" href="css/style.css">
     <title>Misión 3</title>
 </head>
 <body>
-    <h1>La tarjeta holográfica</h1>
-    <input type="button" value="hola" id="test">
-
+    <div id="titulo">
+        <h1>La tarjeta holográfica</h1>
+        <h2>Vienvenido a la tarjeta holográfica, cambia tu nombre y encuentra los secretos escondidos</h2>
+    </div>
+    <div id="lema_box">
+        <p id="lema"></p>
+        <p id="contador_holografico"></p>
+    </div>
+    <div id="nombre_box">
+        <p>Escribe tu nombre</p>
+        <input type="text" placeholder="Nombre" id="nombre_input">
+        <input type="button" value="Cambiar tema" id="tema_button">
+    </div>
+    <div class="tema_1" id="tarjeta_box">
+        <img src="img/foto_perfil.jpg" alt="foto de perfil" id="foto_perfil">
+        <p id="nombre_tarjeta">...</p>
+    </div>
 </body>
 </html>
