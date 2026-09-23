@@ -1,57 +1,71 @@
-/* Fuente descargada */
+/* Oculta la barra en general */
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* Configuarmos la fuente */
 @font-face {
-    font-family: 'arcade';
-    src: url('fonts/arcadeclassic/ARCADECLASSIC.TTF') format('truetype');
-}   
+  font-family: 'pixel';
+  src: url('fonts/undertale-deltarune-extended/undertale-deltarune-extended-fixed.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
 
-/* Modificamos el cuerpo */
 body{
-    font-family: 'arcade';
-    background-image: url(../img/fondo-minecraft.webp);
-    background-size: cover;
-    margin: 0;
-    color: white;
+    font-family: pixel;
+    background-color: #B7C2B3;
 }
 
-/* Modificamos el header */
+button{
+    font-family: pixel;
+}
+
 header{
-    background-color: rgb(48, 48, 48);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 80px;
-    padding: 10px;
-}
-
-.header_element{
-    margin: 5px;
-}
-
-/* Modificamos el título */
-#titulo{
-    color: rgba(255, 255, 255, 0.764);
-    margin-right: 90px;
     text-align: center;
 }
 
-/* Modificamos el main */
+#title_content{
+    margin: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+iframe{
+    margin-left: 20px;
+}
+
 main{
     display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 50px;
-}
-
-/* Modificamos los datos */
-#datos{
-    margin-right: 20px;
-    display: flex;
     flex-direction: column;
+    align-items: center;
 }
 
-/* Modificamos el tablero */
-.button_tablero{
-    width: 50px;
-    height: 50px;
-    margin: 10px;
+#ready{
+    font-size: large;
+    width: 700px;
+    height: 400px;
+    margin-top: 30px;
+}
+
+#puntuacion{
+    height: 30px;
+    margin: 30px;
+}
+
+/* Clases que se le aplicarán a los botones dependiendo de su estado */
+.on{
+    background-color: #04AA6D;
+}
+
+.on:hover{
+    background-color: #46a049;
+}
+
+.off{
+    background-color: #e7e7e7;
+}
+
+.off:hover {
+    background-color: #ddd;
 }

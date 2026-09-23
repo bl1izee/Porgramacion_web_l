@@ -3,42 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script type="module" src="js/app.js" defer></script>
+    <!-- defer: espera a que el HTML esté listo -->
+    <script src="js/app.js" defer></script>
     <link rel="stylesheet" href="css/style.css">
-    <title>Caza el bug</title>
+    <title>Reto jefe</title>
 </head>
 <body>
     <header>
-        <div id="titulo" class="header_element">
-            <h1>Caza al bug</h1>
-            <h4>MINECRAFT EDITION</h4>
+        <div id="title_content">
+            <h1 id="title">Ready... GO!</h1>
+            <iframe src="https://giphy.com/embed/13xQQDcU8FXUuA" width="240" height="130" style="" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
         </div>
-        <button id="jugar" class="header_element">Jugar</button>
-        <button id="Instrucciones" class="header_element">Instrucciones</button>
+        <h3 id="sub_title">Encuentra el botón secreto 🤫 pIsta</h3>
     </header>
     <main>
-        <div id="datos">
-            <p>Puntos: <span id="puntos">0</span></p>
-            <p>Tiempo: <span id="tiempo">30</span> s</p>
-        </div>
-        <section id="tablero">
-            <div id="tablero_1">
-                <button id="button_1" class="button_tablero"></button>
-                <button id="button_2" class="button_tablero"></button>
-                <button id="button_3" class="button_tablero"></button>
-            </div>
-            <div id="tablero_2">
-                <button id="button_4" class="button_tablero"></button>
-                <button id="button_5" class="button_tablero"></button>
-                <button id="button_6" class="button_tablero"></button>
-            </div>
-            <div id="tablero_2">
-                <button id="button_7" class="button_tablero"></button>
-                <button id="button_8" class="button_tablero"></button>
-                <button id="button_9" class="button_tablero"></button>
-            </div>
-        </section>
+        <button id="ready" class="on">Ready...</button>
+        <span id="puntuacion"></span>
+        <button id="reiniciar" class="off">reiniciar</button>
     </main>
-    <p id="test"></p>
 </body>
 </html>
