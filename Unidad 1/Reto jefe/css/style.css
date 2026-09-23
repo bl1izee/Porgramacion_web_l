@@ -13,7 +13,6 @@
 
 body{
     font-family: pixel;
-    background-color: #B7C2B3;
 }
 
 button{
@@ -68,4 +67,16 @@ main{
 
 .off:hover {
     background-color: #ddd;
+}
+
+/* Clases que se le aplicarán al boddy dependiendo del modo */
+
+.claro{
+    background-color: #B7C2B3;
+    color: black;
+}
+
+.oscuro{
+    background-color: #6c30cc;
+    color: white;
 }
