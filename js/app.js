@@ -1,13 +1,13 @@
 const ready = document.querySelector("#ready");
 const historial = document.querySelector("#historial_puntos");
 const reiniciar = document.querySelector("#reiniciar");
+const body = document.querySelector("body");
 let tiempo_actual;
 let historial_puntos = [];
 
 // Evento encargado del modo calro/oscuro
 document.addEventListener("keydown", (data) => {
     if(data.key === "i"){
-        let body = document.querySelector("body");
         body.classList.toggle("claro");
         body.classList.toggle("oscuro");
     }
@@ -46,7 +46,7 @@ function prepararJuego(){
     const tiempo = (Math.floor(Math.random() * 6) + 1) * 1000; // Obtenemos los seg donde tendrá que parar el juego
 
     // Cambiamos las propiedades del botón del juego
-    ready.classList.add("stady");
+    ready.classList.add("estady");
     ready.textContent = "WAIT...";
 
     // Inicia el juego al pasar los x segundos de tiempo
@@ -60,7 +60,7 @@ function iniciar() {
     
     // Cambiamos las propiedades del botón
     ready.setAttribute("data-estado", "go");
-    ready.classList.remove("stady");
+    ready.classList.remove("estady");
     ready.classList.add("parar");
     ready.textContent = "GO!";
 }
@@ -84,5 +84,5 @@ function detenerJuego() {
     reiniciar.removeAttribute("disabled");
 
     // Imprimimos el hisotrial de juego 
-    historial.textContent = historial_puntos;
+    historial.textContent = historial_puntos.join(",");
 }
