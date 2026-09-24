@@ -41,6 +41,7 @@ main{
 }
 
 #ready{
+    color: black;
     font-size: large;
     width: 700px;
     height: 400px;
@@ -79,4 +80,21 @@ main{
 .oscuro{
     background-color: #6c30cc;
     color: white;
+}
+
+/* Clase que se aplica cuando inicie el juego */
+.stady{
+    background-color: rgb(233, 127, 51);
+}
+
+.stady:hover{
+    background-color: rgb(243, 158, 97);
+}
+
+.parar{
+    background-color: rgb(240, 52, 52);
+}
+
+.parar:hover{
+    background-color: rgb(255, 117, 117);
 }
