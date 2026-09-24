@@ -83,6 +83,6 @@ function detenerJuego() {
     reiniciar.classList.add("on");
     reiniciar.removeAttribute("disabled");
 
-    // Imprimimos el hisotrial de juego
+    // Imprimimos el hisotrial de juego 
     historial.textContent = historial_puntos;
 }
