@@ -20,3 +20,4 @@ en bugs, ayudas para quitar y poner etiquetas, y usar Date
 1. Pensar como modularé mi codigo y si usar etiquetas para diferenciar el estado en el que se encuentra el juego
 2. El uso de clases y etiquetas data-... puesto que no hay mucha 
 diferencia y ambos podrían hacer el mismo funcionamiento
+3. Decidir como imprimir el historial

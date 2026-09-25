@@ -18,13 +18,11 @@ reiniciar.addEventListener("click", () => {
     // Cambiamos las propiedades del botón reiniciar
     reiniciar.classList.remove("on");
     reiniciar.classList.add("off");
-    reiniciar.setAttribute("disabled", "True");
+    reiniciar.setAttribute("disabled", "");
 
     // Cambiamos las propiedades del botón del juego
     ready.removeAttribute("disabled");
-    ready.classList.remove("off");
-    ready.classList.add("on");
-    ready.textContent = "Ready...";
+    actualizarBoton(ready, "on", "Ready...");
     ready.setAttribute("data-estado", "inactivo");
 });
 
@@ -46,8 +44,8 @@ function prepararJuego(){
     const tiempo = (Math.floor(Math.random() * 6) + 1) * 1000; // Obtenemos los seg donde tendrá que parar el juego
 
     // Cambiamos las propiedades del botón del juego
-    ready.classList.add("estady");
-    ready.textContent = "WAIT...";
+    ready.setAttribute("disabled", ""); // Deshabilitamos el botón para que no se acumulen setTimeout()
+    actualizarBoton(ready, "estady", "WAIT...");
 
     // Inicia el juego al pasar los x segundos de tiempo
     setTimeout(() => {
@@ -59,10 +57,9 @@ function iniciar() {
     tiempo_actual = Date.now(); // Guarda los ms al empezar el juego
     
     // Cambiamos las propiedades del botón
+    ready.removeAttribute("disabled"); // Volvemos a activar el juego
     ready.setAttribute("data-estado", "go");
-    ready.classList.remove("estady");
-    ready.classList.add("parar");
-    ready.textContent = "GO!";
+    actualizarBoton(ready, "parar", "GO!");
 }
 
 function detenerJuego() {
@@ -72,11 +69,8 @@ function detenerJuego() {
     historial_puntos.push(puntuacion); // Añadimos la puntuación al historial
 
     // Cambiamos las propiedades del botón
-    ready.classList.remove("parar");
-    ready.setAttribute("disabled", "True");
-    ready.classList.remove("on");
-    ready.classList.add("off");
-    ready.textContent = `Puntuación: ${puntuacion}`;
+    ready.setAttribute("disabled", "");
+    actualizarBoton(ready, "off", `Puntuación: ${puntuacion}`);
 
     // Habilitamos el botón reiniciar
     reiniciar.classList.remove("off");
@@ -84,5 +78,17 @@ function detenerJuego() {
     reiniciar.removeAttribute("disabled");
 
     // Imprimimos el hisotrial de juego 
-    historial.textContent = historial_puntos.join(",");
+    historial.textContent = "";
+
+    historial_puntos.forEach((puntuacion) => {
+        const elemento = document.createElement("span");
+        elemento.textContent = `${puntuacion}, `;
+        historial.appendChild(elemento);
+    });
+}
+
+function actualizarBoton(elemento, clase, texto) {
+    elemento.classList.remove("on", "off", "estady", "parar");
+    elemento.classList.add(clase);
+    elemento.textContent = texto;
 }

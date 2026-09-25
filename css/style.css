@@ -83,11 +83,11 @@ main{
 }
 
 /* Clase que se aplica cuando inicie el juego */
-.stady{
+.estady{
     background-color: rgb(233, 127, 51);
 }
 
-.stady:hover{
+.estady:hover{
     background-color: rgb(243, 158, 97);
 }
 
