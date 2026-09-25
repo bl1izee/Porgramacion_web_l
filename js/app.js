@@ -40,6 +40,7 @@ function start(){
     }
 }
 
+// Función que desabilita el botón de ready y lo cambia de color. Inicia el juego cuando pasa x segundos
 function prepararJuego(){
     const tiempo = (Math.floor(Math.random() * 6) + 1) * 1000; // Obtenemos los seg donde tendrá que parar el juego
 
@@ -53,6 +54,7 @@ function prepararJuego(){
     }, tiempo);
 }
 
+// Función que se llama para empezar a contar los ms que tarda en responder el user y cambia las propiedades del botón ready, como poner el nuevo estado de 'go'
 function iniciar() {
     tiempo_actual = Date.now(); // Guarda los ms al empezar el juego
     
@@ -62,6 +64,7 @@ function iniciar() {
     actualizarBoton(ready, "parar", "GO!");
 }
 
+// Función que se llama cuando el user para el contador y realiza los calculos, así como añadir al hisotrial la nueva puntuación
 function detenerJuego() {
     const tiempo_transcurrido = Date.now(); // Guarda los ms al finalizar el juego
     const puntuacion = tiempo_transcurrido - tiempo_actual;
@@ -87,7 +90,8 @@ function detenerJuego() {
     });
 }
 
-function actualizarBoton(elemento, clase, texto) {
+// Función que retoca botones
+function actualizarBoton(elemento="ready", clase, texto) {
     elemento.classList.remove("on", "off", "estady", "parar");
     elemento.classList.add(clase);
     elemento.textContent = texto;
